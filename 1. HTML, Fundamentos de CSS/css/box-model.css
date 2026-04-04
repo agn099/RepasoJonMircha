@@ -1,0 +1,238 @@
+/* 
+
+Modelo de cada: la forma en que CSS ve a los elementos HTML. Y ¿Cómo los ve?. Como s fueran cajas con las siguientes propiedades::after
+1. El contenido (contect): El contendido (texto) del elemento HTML, tomando en cuenta sus dimenciones. (width & height)
+2. El borde (dorder): Lo que delimita cada uno de los elementos HTML
+3. El relleno (pading): son las dostancias internas (La disctancia del orde al contenido)
+4. El margen (margin): Son las distancias externas (La distancia entre el elemento HTML y sus elementos hermanos o padres)
+
+Dentro del modelo de caja hay que considerar que una cada tendrá 4 lados:
+1. arriba (top)
+2. derecha (right)
+3. Abajo (bottom)
+4. izquierda (left)
+*/ 
+
+h1 {
+  width: 400px;
+  height: 200px;
+  border-color: green;
+ border-width: 10px; /* thin: 1 px, medium: 3px, thick: 5px  */
+border-style: groove;
+border-width: 40px;
+border-style: double;
+border-color: blueviolet;
+ /* border: 10px dotted blue;  */
+ border-top-color: red;
+}
+
+nav a {
+ border: 5px double red ;
+ padding: 10px;
+}
+
+.logo {
+  width: 50px;
+  align-self: auto;
+}
+
+table td.nav,th {
+  border: 2px solid red;
+}
+
+.table-content {
+  border: 3px solid red;
+  padding: 30px;
+  margin: 30px;
+  width: 250px;
+  height: 150px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  float: right;
+
+}
+
+.caja-uno, .caja-dos {
+background-color: pink;
+border: 10px solid blue;
+
+
+/* 
+Esto aplica para margin y padding 
+1 valor = aplica para los 4 lados
+2 valor = El primer valor es para los lados verticales (t/b)
+  El segundo valor es para los lados horizontales (l/r)
+3 valor = 
+  El primer valor es para top
+  Segundo vaor es para lados horizontales
+  Tercer valor es para bottom
+4 valor = 
+  El primer valor es para top (12)
+  Segundo vaor es para lados right (3)
+  Tercer valor es para bottom (6)
+  Cuerto valor es para left (9)
+*/
+
+padding: 10px;
+margin: 10px;
+padding: 20px 40px;
+margin: 40px 20px;
+padding: 35px 45px 55px;
+margin: 15px 25px 35px;
+padding: 10px 20px 30px 40px;
+margin: 40px 30px 20px 10px;
+}
+
+/* 
+Caja de línea.
+- Ocupan el espacop necesario para mostrar su contenido.
+- No tienen dimensiones modificable (alto, ancho)
+- Permiten otros elementos a su lado.
+- Padding y margin: Solo empujan elementos adyacentes a su lado (NUNCA EN VERTICAL)
+Caja en bloque
+- Ocupan todo el ancho disponible, lo que genera saltos de línea.
+- Tienen dimensiones modificables (alto, ancho)
+- No permite otros elementos a su lado (aunque especifique un ancho, sigue ocupando
+todo el espacio disponible a lo ancho, generando saltos de linea)
+*/
+
+.caja-linea, .caja-bloque, .caja-hidden {
+background-color: darkcyan;
+color: white;
+height: 250px;
+width: 500px;
+border: medium solid #000000;
+padding: 16px;
+margin: 32px;
+}
+
+.caja-bloque {
+margin: 32px;
+}
+
+.caja-linea {
+margin: 48px;
+}
+
+/* Propiedad display
+- inline
+- block
+- inline-block -> Secomporta como un elemento en linea pero acepta modificar sus dimensiones (alto, ancho)
+- none
+- table
+- list-item
+- flex - Ve mi curso de flexbox CSS
+- grid - Ve mi curso de Grid CSs
+*/
+
+.caja-linea-bloque {
+display: inline-block;
+
+}
+
+.caja-none {
+display: none;
+background-color: darkolivegreen;
+color: white;
+}
+
+.caja-hidden {
+  visibility: hidden;
+}
+
+.overflow {
+  
+  background-color: greenyellow;
+  width: 300px;
+  height: 150px;
+  overflow: auto;
+  /* overflow:scroll;
+  overflow: hidden;
+  overflow: auto; */
+}
+
+.box-sizing-content, .box-sizing-border  {
+background-color: deepskyblue;
+box-sizing: content-box;
+width: 500px;
+height: 150px;
+padding: 10px;
+border: thick solid black;
+}
+
+.box-sizing-border {
+  box-sizing: border-box;
+}
+
+.container-col-3 {
+  background-color: burlywood;
+  width: 600px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+
+.container-col-3 > *{
+  box-sizing: border-box; 
+  width: 200px;
+   border: thin solid red;
+   padding: 10px;
+   float: left;
+}
+
+
+/*https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Floats */
+.container-floats{
+  background-color: cornflowerblue;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+clear: both;
+}
+
+/* Colapso de Márgenes verticales */
+.margin-collapse {
+  background-color: aquamarine;
+}
+
+.margin-collapse section {
+border: 1px solid black;
+margin-top:  16px;
+margin-bottom: 16px;
+}
+
+.margin-collapse span{
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+/* centrado-de-cajas */
+.sitio-web {
+  border: thin solid black;
+  background-color: thistle;
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}

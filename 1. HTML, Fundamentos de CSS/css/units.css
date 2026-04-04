@@ -1,0 +1,65 @@
+/* 
+Unidades de medida
+1) Absolutas (su valor no cambia, son unidades del mundo real)
+pc, cm, mm, in, 
+pt (1/72in)
+px (1/96in)
+2) Su valor es relativo a un acontexto) Ejemplo: 
+em, rem, ex, ch - al tamaño de la fuente 
+em: Basada en la anchura de la letra "m" de la fuente del elemento.
+rem: Basada en la anchura de la letra "m" de la fuente del elemento(html).
+ex: Basada en la anchura de la letra "x" de la fuente del elemento.
+ch: Basada en la anchura de la letra "0" de la fuente del elemento.
+%: El tamaño del contenedor.
+vw, vh, vmin, vmax: al tamaño del viewport.
+vw: ancho del viewport, van de 1 a 100.
+vh: alto del viewport, van de 1 a 100.
+vmax: entre vw y vh toma el que tenga el mayor valor.
+vmin: entre vw y vh toma el que tenga el menor valor.
+
+Conversiones de unidades - https://pxtoem.com.au/
+*/
+
+
+
+
+.title {
+  background-color: palegoldenrod;
+  border: 20px solid rgb(254, 238, 62);
+  padding: 30px;
+  margin: 40px;
+  text-align: center;
+  
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after, /* Selecciona todos los elementos y sus pseudo-elementos */
+*::before { /* Selecciona todos los elementos y sus pseudo-elementos */
+  box-sizing: border-box;
+}
+
+.pixeles {
+  background-color: cadetblue;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  font-size: 32px;
+  border: 5px solid rebeccapurple;
+}
+
+.ems {
+  background-color: cadetblue;
+  font-size: 24px;
+  padding:  1em;
+  border: 5px solid rebeccapurple;
+}
+
+.em-child {
+  background-color: salmon;
+  border: thick solid beige;
+  font-size: 2em;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modelo de caja en css</title>
+  <link rel="stylesheet" href="/css/box-model.css">
+</head>
+
+<body>
+  <h1>Modelo de caja en CSS</h1>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro dignissimos delectus doloribus alias sit inventore
+    quos voluptatum at? Mollitia sunt harum delectus eaque esse non sit quos expedita omnis voluptas?</p>
+  <a href="index.html#temario-css">☝🏻</a>
+  <br>
+  <img class="logo" src="/images/LEGO_logo.svg" alt="">
+  <nav>
+    <a href="" class="nav">Inicio</a>
+    <a href="" class="nav">Contacto</a>
+    <a href="" class="nav">Acerca</a>
+  </nav>
+
+  <div>
+    <blockquote cite="https://en.wikiquote.org/wiki/Marie_Curie">
+      Be less curious about people and more curious about ideas.
+    </blockquote>
+    <div class="table-content">
+      <table>
+        <caption>The Beatles</caption>
+        <tr>
+          <th>John Lennon</th>
+          <th>Rhythm Guitar</th>
+        </tr>
+        <tr>
+          <td>Paul McCartney</td>
+          <td>Bass</td>
+        </tr>
+        <tr>
+          <td>George Harrison</td>
+          <td>Lead Guitar</td>
+        </tr>
+        <tr>
+          <td>Ringo Starr</td>
+          <td>Drums</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <form action="/subscribe" method="post">
+    <fieldset>
+      <legend>Subscribe to the Newsletter</legend>
+      <input type="email" name="email">
+      <button>Ok</button>
+    </fieldset>
+  </form>
+
+  <form action="/signup" method="post">
+    <p>
+      <label>Title</label><br>
+      <label>
+        <input type="radio" name="title" value="mr">
+        Mr
+      </label>
+      <label>
+        <input type="radio" name="title" value="mrs">
+        Mrs
+      </label>
+      <label>
+        <input type="radio" name="title" value="miss">
+        Miss
+      </label>
+    </p>
+    <p>
+      <label>First name</label><br>
+      <input type="text" name="first_name">
+    </p>
+    <p>
+      <label>Last name</label><br>
+      <input type="text" name="last_name">
+    </p>
+    <p>
+      <label>Email</label><br>
+      <input type="email" name="email" required>
+    </p>
+    <p>
+      <label>Phone number</label><br>
+      <input type="tel" name="phone">
+    </p>
+    <p>
+      <label>Password</label><br>
+      <input type="password" name="password">
+    </p>
+    <p>
+      <label>Country</label><br>
+      <select>
+        <option>China</option>
+        <option>India</option>
+        <option>United States</option>
+        <option>Indonesia</option>
+        <option>Brazil</option>
+      </select>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" value="terms">
+        I agree to the <a href="/terms">terms and conditions</a>
+      </label>
+    </p>
+    <p>
+      <button>Sign up</button>
+      <button type="reset">Reset form</button>
+    </p>
+  </form>
+  <hr>
+  <div class="caja-uno">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio accusamus omnis totam aut sequi praesentium vel reiciendis, ab cumque quam aspernatur suscipit possimus animi repellat dolore autem optio dolorum blanditiis?</div>
+  <div class="caja-dos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque explicabo earum eaque nulla at, asperiores ex adipisci, voluptas velit modi cupiditate et tempore, quibusdam numquam labore enim. Quas, pariatur delectus!</div>
+
+  <hr>
+  <h2>Cajas de Línea VS Cajas de Bloque</h2>
+  <span class="caja-linea">Esto es una caja de línea</span>
+  <span>Esto es una span</span>
+    <div class="caja-bloque">Esto una caja de bloque</div>
+  <h2>Propiedad display</h2>
+  <div class="caja-none">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique ipsum sunt autem laborum nobis maxime eaque numquam at veniam! A atque natus sed labore optio expedita eius dolores possimus tempore.
+  </div>
+  <span class="caja-linea-bloque">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, nulla! Hic, dolor quam repellat labore dolore non ullam, facilis facere quibusdam suscipit voluptatibus atque, quas eum et recusandae at deserunt.
+  </span>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat magni quisquam qui assumenda aut odit dolorum rem libero, et consequatur a earum ullam ex maxime molestiae nesciunt non temporibus quae!</p>
+<ul>
+  <li>item 1</li>
+  <li>item 2</li>
+  <li>item 3</li>
+  <li>item 4</li>
+</ul>
+
+<table>
+  <tr>
+    <td>Celda 1</td>
+    <td>Celda 2</td>
+    <td>Celda 3</td>
+  </tr>
+  <tr>
+    <td>Celda 4</td>
+    <td>Celda 5</td>
+    <td>Celda 6</td>
+  </tr>
+  <tr>
+    <td>Celda 7</td>
+    <td>Celda 8</td>
+    <td>Celda 9</td>
+  </tr>
+</table>
+
+<!-- Propiedad Visibility -->
+<hr>
+<h2>Propiedad Visibility</h2>
+<div class="caja-none">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error natus ad eum dignissimos veniam blanditiis velit tempora expedita, maxime cumque perspiciatis repellat distinctio! Exercitationem error ratione labore, quisquam expedita quod.
+</div>
+<div class="caja-hidden">
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error natus ad eum dignissimos veniam blanditiis velit tempora expedita, maxime cumque perspiciatis repellat distinctio! Exercitationem error ratione labore, quisquam expedita quod.
+</div>
+<hr>
+<h2>Propiedad Overflow</h2>
+<p class="overflow">
+  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis maiores repellendus id quaerat nobis! Maxime, iusto, illo ex ipsa suscipit maiores recusandae, voluptatem in non nulla exercitationem ipsum neque accusantium.
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, expedita laborum nulla provident aut esse nostrum, odio consectetur voluptate debitis, ullam dicta? Magni similique eius impedit excepturi illum ad consectetur recusandae quod nisi quisquam asperiores dignissimos modi, minima autem. Nesciunt, sapiente fugiat! Nemo, doloremque fugit velit quisquam quibusdam dicta vero quasi magnam delectus, ducimus quos pariatur perspiciatis nisi molestias rerum earum fuga? Adipisci necessitatibus nobis quas quae est ad iste dolorem in, enim sint sequi expedita culpa tempore rerum repudiandae.
+</p>
+<hr>
+
+<h2>Tamaño de caja</h2>
+<div class="box-sizing-content">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum quod, deleniti consequatur labore excepturi, atque dolore rerum veniam, dolor vel. Amet facere natus qui labore similique obcaecati ad ex?
+</div>
+<div class="box-sizing-border">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cum quod, deleniti consequatur labore excepturi, atque dolore rerum veniam, dolor vel. Amet facere natus qui labore similique obcaecati ad ex?
+</div>
+
+<article class="container-col-3">
+  <section class="item">Sección 1</section>
+  <section class="item">Sección 2</section>
+  <section class="item">Sección 3</section>
+</article>
+    <a href="index.html#temario-css">☝🏻</a>
+<hr>
+<h2>Propiedad Float & Clear</h2>  
+<article class="container-floats">
+  <section class="float-right">Este elemento flota a la derecha</section>
+  <section class="float-left">Este elemento flota a la izquierda</section>
+</article>
+<div class="clearfix"></div>
+<article>
+  <section class="">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic non velit molestiae nobis aut sint eius atque praesentium accusantium ab, reiciendis quam debitis odio vel voluptatem voluptas? Accusamus, esse quo?
+  </section>
+</article>
+<hr>
+<h2>Colapso de imagenes verticales</h2>
+<article class="margin-collapse">
+  <section>Sección 1</section>
+  <section>Sección 2</section>
+  <section><span>Span 1</span><span>Span 2</span><span>Span 3</span></section>
+</article>
+<br>
+<hr>
+<h2>Centrado de cajas</h2>
+<article class="sitio-web">
+  <header>Cabecera</header>
+  <main>Contenido principal</main>
+  <footer>Pié de pagina</footer>
+</article>
+<a href="index.html#temario-css">☝🏻</a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
