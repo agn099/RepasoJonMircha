@@ -6,12 +6,12 @@ pt (1/72in)
 px (1/96in)
 2) Su valor es relativo a un acontexto) Ejemplo: 
 em, rem, ex, ch - al tamaño de la fuente 
-em: Basada en la anchura de la letra "m" de la fuente del elemento.
-rem: Basada en la anchura de la letra "m" de la fuente del elemento(html).
-ex: Basada en la anchura de la letra "x" de la fuente del elemento.
-ch: Basada en la anchura de la letra "0" de la fuente del elemento.
-%: El tamaño del contenedor.
-vw, vh, vmin, vmax: al tamaño del viewport.
+em: Basada en la anchura de la letra "m" de la fuente del elemento. (Es recomendado utilizar cuando se quiere utilizar cards o cajas de contenido, ya que se adaptan al tamaño del texto)
+rem: Basada en la anchura de la letra "m" de la fuente del elemento(html). (Se recomieda utilizar para las tipografías, ya que se adaptan al tamaño del texto del elemento raíz)
+ex: Basada en la anchura de la letra "x" de la fuente del elemento. (se recomienda utilizar para la altura de las líneas, ya que se adaptan al tamaño del texto)
+ch: Basada en la anchura de la letra "0" de la fuente del elemento. (Se recomienda utilizar en el ancho de los caracteres, solo cuando uno necesita definir un ancho específico para los caracteres)
+%: El tamaño del contenedor. (Se recomienda utilizar para definir el tamaño de los elementos en relación a su contenedor padre, ya que se adaptan al tamaño del contenedor)
+vw, vh, vmin, vmax: al tamaño del viewport. (Se recomienda utilizar para definir el tamaño de los elementos en relación al tamaño de la ventana del navegador, ya que se adaptan al tamaño del viewport)
 vw: ancho del viewport, van de 1 a 100.
 vh: alto del viewport, van de 1 a 100.
 vmax: entre vw y vh toma el que tenga el mayor valor.
@@ -20,16 +20,13 @@ vmin: entre vw y vh toma el que tenga el menor valor.
 Conversiones de unidades - https://pxtoem.com.au/
 */
 
-
-
-
 .title {
   background-color: palegoldenrod;
   border: 20px solid rgb(254, 238, 62);
   padding: 30px;
   margin: 40px;
   text-align: center;
-  
+
 }
 
 html {
@@ -37,8 +34,10 @@ html {
 }
 
 *,
-*::after, /* Selecciona todos los elementos y sus pseudo-elementos */
-*::before { /* Selecciona todos los elementos y sus pseudo-elementos */
+*::after,
+/* Selecciona todos los elementos y sus pseudo-elementos */
+*::before {
+  /* Selecciona todos los elementos y sus pseudo-elementos */
   box-sizing: border-box;
 }
 
@@ -54,7 +53,7 @@ html {
 .ems {
   background-color: cadetblue;
   font-size: 24px;
-  padding:  1em;
+  padding: 1em;
   border: 5px solid rebeccapurple;
 }
 
